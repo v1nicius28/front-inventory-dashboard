@@ -2,6 +2,7 @@ import { useState } from "react";
 import { EnvelopeIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -109,12 +110,11 @@ export default function Login() {
               Entrar
             </button>
 
-            {/* Link de registro */}
             <p className="w-full max-w-sm text-center text-white/70 text-base">
               Não tem uma conta?{" "}
-              <a href="/register" className="text-white underline">
+              <Link to="/register" className="text-white underline">
                 Registre-se aqui
-              </a>
+              </Link>
             </p>
 
             {/* Botão Convidado */}
