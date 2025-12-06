@@ -2,6 +2,7 @@ import { useState } from "react";
 import { EnvelopeIcon, EyeIcon, EyeSlashIcon, UserIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -124,9 +125,9 @@ export default function Register() {
             {/* Link para login */}
             <p className="w-full max-w-sm text-center text-white/70 text-base">
               Já tem uma conta?{" "}
-              <a href="/login" className="text-white underline">
+              <Link to="/login" className="text-white underline">
                 Faça login
-              </a>
+              </Link>
             </p>
 
           </form>
