@@ -1,18 +1,50 @@
-# React + Vite
+# 📦 Inventory Dashboard — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida em React + Vite, estilizada com TailwindCSS, responsável por consumir a API de inventário hospedada no Render e exibir o painel interativo com login, listagem e controle de produtos.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1920" height="1080" alt="Captura de Tela (14)" src="https://github.com/user-attachments/assets/5a881651-d341-4049-97dd-db49ef1dda79" />
+<img width="1920" height="1080" alt="Captura de Tela (15)" src="https://github.com/user-attachments/assets/984b4541-e4fd-409e-a660-0b2a331406fa" />
 
-## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+🚀 Tecnologias Utilizadas
 
-Note: This will impact Vite dev & build performances.
+React 
 
-## Expanding the ESLint configuration
+Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+TailwindCSS
+
+Axios (requisições HTTP)
+
+React Router DOM
+
+Zod (validação)
+
+JWT no localStorage
+
+Context API para autenticação
+
+🔗 Hospedagem
+
+Frontend: Vercel → https://front-inventory-dashboard.vercel.app/
+
+Backend: Render (API Spring Boot)
+
+O frontend se comunica com a API via variáveis de ambiente.
+
+⚙️ Funcionalidades
+
+🔐 Login com JWT
+
+📦 Listagem de produtos
+
+➕ Cadastro de produto
+
+✏️ Atualização de produto
+
+🗑️ Exclusão de produto
+
+📊 Dashboard simplificado
+
+🚫 Redirecionamento automático ao deslogar/token inválido
