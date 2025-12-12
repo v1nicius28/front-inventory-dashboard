@@ -27,7 +27,7 @@ Context API para autenticação
 
 🔗 Hospedagem
 
-Frontend: Vercel → https://front-inventory-dashboard.vercel.app/
+Frontend: Vercel → https://front-inventory-dashboard.vercel.app
 
 Backend: Render (API Spring Boot)
 
