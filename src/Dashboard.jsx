@@ -14,7 +14,7 @@ import {
   Squares2X2Icon,
   BuildingStorefrontIcon,
   CurrencyDollarIcon,
-} from "@heroicons/react/24/solid";
+} from "@heroicons/react/24/outline";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -102,16 +102,18 @@ export default function Dashboard() {
   const voltarParaLogin = () => navigate("/login");
 
   return (
-    <div className="min-h-screen w-full bg-[radial-gradient(circle,#0085FF_0%,#002243_100%)] flex items-center justify-center p-6 relative">
+    <div className="min-h-screen w-full bg-[radial-gradient(circle,#171A57_0%,#060B26_100%)] flex items-center justify-center p-6 relative">
       {/* CARD DE FUNDO */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-        <div className="w-11/12 max-w-[1400px] h-[90vh] sm:h-[65vh] md:h-[85vh] rounded-2xl shadow-2xl bg-linear-to-br from-[#003465] to-[#006dd3]"></div>
+        <div className="w-11/12 max-w-[1400px] h-[90vh] sm:h-[65vh] md:h-[85vh] rounded-2xl shadow-2xl bg-linear-to-bl from-transparent to-white/10 radial-border"></div>
       </div>
 
       {/* CARD PRINCIPAL */}
-      <div className="relative z-10 w-full max-w-7xl h-auto lg:h-[75vh] bg-white/10 border-2 border-white/20 backdrop-blur-xl rounded-3xl shadow-2xl flex flex-col lg:flex-row overflow-hidden">
+      <div className="relative z-10 w-full max-w-7xl h-auto lg:h-[75vh] bg-linear-to-br from-[#0F123B]
+                      from-0% via-[#090D2E] via-59% to-[#020515] to-100% backdrop-blur-xl rounded-3xl
+                      shadow-2xl flex flex-col lg:flex-row overflow-hidden">
         {/* FORMULÁRIO */}
-        <div className="lg:w-1/3 w-full bg-white/5 p-6 lg:p-8 flex flex-col gap-6">
+        <div className="lg:w-1/3 w-full p-6 lg:p-8 flex flex-col gap-6">
           <h2 className="text-2xl text-white font-bold text-center">
             {editingId ? "Editar Produto" : "Novo Produto"}
           </h2>
@@ -119,76 +121,76 @@ export default function Dashboard() {
           <form className="flex flex-col gap-4 sm:gap-6" onSubmit={handleSubmit}>
             {/* Nome */}
             <div className="relative">
-              <CubeIcon className="w-5 h-5 text-white/50 absolute left-3 top-1/2 -translate-y-1/2" />
+              <CubeIcon className="w-5 h-5 text-white absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 name="name"
                 placeholder="Nome"
                 value={form.name}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
                 required
               />
             </div>
 
             {/* Preço */}
             <div className="relative">
-              <CurrencyDollarIcon className="w-5 h-5 text-white/50 absolute left-3 top-1/2 -translate-y-1/2" />
+              <CurrencyDollarIcon className="w-5 h-5 text-white absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="number"
                 name="price"
                 placeholder="Preço"
                 value={form.price}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
                 required
               />
             </div>
 
             {/* Quantidade */}
             <div className="relative">
-              <Squares2X2Icon className="w-5 h-5 text-white/50 absolute left-3 top-1/2 -translate-y-1/2" />
+              <Squares2X2Icon className="w-5 h-5 text-white absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="number"
                 name="quantity"
                 placeholder="Quantidade"
                 value={form.quantity}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
                 required
               />
             </div>
 
             {/* Categoria */}
             <div className="relative">
-              <TagIcon className="w-5 h-5 text-white/50 absolute left-3 top-1/2 -translate-y-1/2" />
+              <TagIcon className="w-5 h-5 text-white absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 name="category"
                 placeholder="Categoria"
                 value={form.category}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
               />
             </div>
 
             {/* Marca */}
             <div className="relative">
-              <BuildingStorefrontIcon className="w-5 h-5 text-white/50 absolute left-3 top-1/2 -translate-y-1/2" />
+              <BuildingStorefrontIcon className="w-5 h-5 text-white absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 name="brand"
                 placeholder="Marca"
                 value={form.brand}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
               />
             </div>
 
             {/* Botão Criar / Atualizar */}
             <button
               type="submit"
-              className="w-full max-w-sm py-3 mt-5 rounded-xl bg-linear-to-r from-[#0ba517] to-[#168100] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
+              className="w-full max-w-sm py-3 mt-5 rounded-xl bg-linear-to-r from-[#30375c] to-[#171A57] hover:from-[#464c69] hover:to-[#171A57] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
             >
               {editingId ? (
                 <>
@@ -206,7 +208,7 @@ export default function Dashboard() {
               <button
                 type="button"
                 onClick={handleCancelEdit}
-                className="w-full max-w-sm py-3 mt-2 rounded-xl bg-orange-500 text-white font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition"
+                className="w-full max-w-sm py-3 mt-2 rounded-xl bg-[#01B574] hover:bg-[#40B389] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
               >
                 <XCircleIcon className="w-6 h-6" /> Cancelar
               </button>
@@ -216,7 +218,7 @@ export default function Dashboard() {
             <button
               type="button"
               onClick={voltarParaLogin}
-              className="w-full max-w-sm py-3 mt-2 rounded-xl bg-linear-to-r from-red-700 to-red-900 text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
+              className="w-full max-w-sm py-3 mt-2 rounded-xl bg-[#9E0004] hover:bg-[#B9030F] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
             >
               <ArrowLeftStartOnRectangleIcon className="w-6 h-6" /> Sair
             </button>
@@ -226,33 +228,33 @@ export default function Dashboard() {
         {/* LISTA DE PRODUTOS */}
         <div className="lg:w-2/3 w-full p-6 lg:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 overflow-auto custom-scrollbar max-h-[75vh]">
           {products.length === 0 ? (
-            <p className="text-white text-center col-span-full">Nenhum produto encontrado</p>
+            <p className="text-white text-center col-span-full">Carregando produtos</p>
           ) : (
             products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white/10 backdrop-blur-md p-4 rounded-2xl shadow-lg max-h-[220px] flex flex-col justify-between text-white"
+                className="bg-linear-to-br from-[#060B28]/74 from-0% to-[#0E153A]/71 to-100% radial-border backdrop-blur-md p-4 rounded-2xl shadow-lg max-h-[220px] flex flex-col justify-between text-white"
               >
                 <div className="mb-4 overflow-auto">
                   <h3 className="text-lg font-bold">{product.name}</h3>
 
                   <p className="flex items-center gap-2">
-                    <CurrencyDollarIcon className="w-5 h-5 text-blue-300" />
+                    <CurrencyDollarIcon className="w-5 h-5 text-white" />
                     Preço: R$ {product.price}
                   </p>
 
                   <p className="flex items-center gap-2">
-                    <Squares2X2Icon className="w-5 h-5 text-blue-300" />
+                    <Squares2X2Icon className="w-5 h-5 text-white" />
                     Quantidade: {product.quantity}
                   </p>
 
                   <p className="flex items-center gap-2">
-                    <TagIcon className="w-5 h-5 text-blue-300" />
+                    <TagIcon className="w-5 h-5 text-white" />
                     Categoria: {product.category}
                   </p>
 
                   <p className="flex items-center gap-2">
-                    <BuildingStorefrontIcon className="w-5 h-5 text-blue-300" />
+                    <BuildingStorefrontIcon className="w-5 h-5 text-white" />
                     Marca: {product.brand}
                   </p>
                 </div>
@@ -260,7 +262,7 @@ export default function Dashboard() {
                 <div className="flex justify-between mt-auto">
                   <button
                     onClick={() => handleEdit(product)}
-                    className="bg-orange-500 px-3 py-1 rounded flex items-center gap-1 hover:bg-orange-600 transition font-semibold"
+                    className="bg-[#01B574] hover:bg-[#40B389] px-3 py-1 rounded flex items-center gap-1 font-semibold hover:scale-105 hover:shadow-2xl transition"
                   >
                     <PencilSquareIcon className="w-5 h-5" />
                     Editar
@@ -272,7 +274,7 @@ export default function Dashboard() {
                         handleDelete(product.id);
                       }
                     }}
-                    className="bg-red-500 px-3 py-1 rounded flex items-center gap-1 hover:bg-red-600 transition font-semibold"
+                    className="bg-[#9E0004] hover:bg-[#B9030F] px-3 py-1 rounded flex items-center gap-1 font-semibold hover:scale-105 hover:shadow-2xl transition"
                   >
                     <TrashIcon className="w-5 h-5" />
                     Deletar

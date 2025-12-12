@@ -35,19 +35,23 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-[radial-gradient(circle,#0085FF_0%,#002243_100%)] fixed inset-0 flex justify-center items-center">
+    <div className="min-h-screen w-full bg-[radial-gradient(circle,#171A57_0%,#060B26_100%)] fixed inset-0 flex justify-center items-center">
 
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
         <div className="
           w-11/12 max-w-[1100px]
           h-[60vh] sm:h-[65vh] md:h-[70vh]
-          rounded-2xl shadow-2xl
-          bg-linear-to-br from-[#003465] to-[#006dd3]
-        "></div>
+          rounded-2xl shadow-2xl 
+          bg-linear-to-br from-[#0F123B]
+          from-0% via-[#090D2E] via-59%
+          to-[#020515] to-100%"
+        ></div>
       </div>
 
       <div className="relative z-10 w-11/12 sm:w-full max-w-lg max-h-[90vh] overflow-auto">
-        <div className="backdrop-blur-xl bg-white/10 border-2 border-white/20 
+      
+        <div className="backdrop-blur-xl bg-linear-to-bl from-transparent to-white/10
+                        radial-border
                         p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl text-white">
 
           <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
@@ -60,7 +64,7 @@ export default function Login() {
             {/* Input Email */}
             <div className="w-full max-w-sm">
               <label className="block text-sm font-medium mb-1">Email</label>
-              <div className="flex items-center bg-white/20 border border-white/40 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition">
+              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition">
                 <input
                   type="email"
                   value={email}
@@ -76,7 +80,7 @@ export default function Login() {
             {/* Input Senha */}
             <div className="w-full max-w-sm">
               <label className="block text-sm font-medium mb-1">Senha</label>
-              <div className="flex items-center bg-white/20 border border-white/40 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition">
+              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition">
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
@@ -100,10 +104,10 @@ export default function Login() {
               type="submit"
               className="
                 w-full max-w-sm py-3 mt-6 rounded-xl
-                bg-linear-to-r from-[#0077e6] to-[#003465]
+                bg-linear-to-r from-[#30375c] to-[#171A57]
                 text-white font-semibold
                 transform transition-all duration-150
-                hover:scale-105 hover:shadow-2xl hover:from-[#369eff] hover:to-[#0055a5]
+                hover:scale-105 hover:shadow-2xl hover:from-[#464c69] hover:to-[#171A57]
                 active:scale-95 
               "
             >
@@ -123,10 +127,10 @@ export default function Login() {
               onClick={entrarComoConvidado}
               className="
                 w-full max-w-sm py-3 rounded-xl
-                bg-linear-to-r from-[#0077e6] to-[#003465]
+                bg-linear-to-r from-[#30375c] to-[#171A57]
                 text-white font-semibold
                 transform transition-all duration-150
-                hover:scale-105 hover:shadow-2xl hover:from-[#369eff] hover:to-[#0055a5]
+                hover:scale-105 hover:shadow-2xl hover:from-[#464c69] hover:to-[#171A57]
                 active:scale-95 
               "
             >
