@@ -59,7 +59,7 @@ export default function Register() {
             {/* Nome */}
             <div className="w-full max-w-sm">
               <label className="block text-sm font-medium mb-1">Nome</label>
-              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition">
+              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-900 transition">
                 <input
                   type="text"
                   value={name}
@@ -75,7 +75,7 @@ export default function Register() {
             {/* Email */}
             <div className="w-full max-w-sm">
               <label className="block text-sm font-medium mb-1">Email</label>
-              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition w-full">
+              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-900 transition w-full">
                 <input
                   type="email"
                   value={email}
@@ -91,7 +91,7 @@ export default function Register() {
             {/* Senha */}
             <div className="w-full max-w-sm">
               <label className="block text-sm font-medium mb-1">Senha</label>
-              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-400 transition">
+              <div className="flex items-center bg-white/10 border border-white/30 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-900 transition">
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
