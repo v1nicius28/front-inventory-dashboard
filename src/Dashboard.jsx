@@ -128,7 +128,7 @@ export default function Dashboard() {
                 placeholder="Nome"
                 value={form.name}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-900 transition w-full"
                 required
               />
             </div>
@@ -142,7 +142,7 @@ export default function Dashboard() {
                 placeholder="Preço"
                 value={form.price}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-900 transition w-full"
                 required
               />
             </div>
@@ -156,7 +156,7 @@ export default function Dashboard() {
                 placeholder="Quantidade"
                 value={form.quantity}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-900 transition w-full"
                 required
               />
             </div>
@@ -170,7 +170,7 @@ export default function Dashboard() {
                 placeholder="Categoria"
                 value={form.category}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-900 transition w-full"
               />
             </div>
 
@@ -183,7 +183,7 @@ export default function Dashboard() {
                 placeholder="Marca"
                 value={form.brand}
                 onChange={handleChange}
-                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-full"
+                className="pl-10 p-3 rounded-xl border border-white/60 bg-[#060B28]/40 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-blue-900 transition w-full"
               />
             </div>
 
