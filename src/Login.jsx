@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
+const API_URL = `${import.meta.env.VITE_API_URL}/auth/login`;
+
 export default function Login() {
   const navigate = useNavigate();
 
@@ -15,7 +17,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("https://api-inventory-dashboard.onrender.com/auth/login", { email, password });
+      const { data } = await axios.post(API_URL, { email, password });
 
       localStorage.setItem("token", data.token);
 
