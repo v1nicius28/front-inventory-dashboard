@@ -29,7 +29,7 @@ export default function Dashboard() {
   });
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = "https://api-inventory-dashboard.onrender.com/products";
+  const API_URL = `${import.meta.env.VITE_API_URL}/products`;
 
   useEffect(() => {
     const fetchProducts = async () => {
