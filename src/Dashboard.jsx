@@ -16,6 +16,8 @@ import {
   CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
 
+const API_URL = `${import.meta.env.VITE_API_URL}/products`;
+
 export default function Dashboard() {
   const navigate = useNavigate();
 
@@ -28,8 +30,6 @@ export default function Dashboard() {
     brand: "",
   });
   const [editingId, setEditingId] = useState(null);
-
-  const API_URL = `${import.meta.env.VITE_API_URL}/products`;
 
   useEffect(() => {
     const fetchProducts = async () => {
