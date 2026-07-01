@@ -190,7 +190,7 @@ export default function Dashboard() {
             {/* Botão Criar / Atualizar */}
             <button
               type="submit"
-              className="w-full max-w-sm py-3 mt-5 rounded-xl bg-linear-to-r from-[#30375c] to-[#171A57] hover:from-[#464c69] hover:to-[#171A57] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
+              className="w-full max-w-sm py-3 mt-5 rounded-xl bg-linear-to-r from-[#3f4a79] to-[#171A57] hover:from-[#565d7c] hover:to-[#171A57] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition cursor-pointer"
             >
               {editingId ? (
                 <>
@@ -208,7 +208,7 @@ export default function Dashboard() {
               <button
                 type="button"
                 onClick={handleCancelEdit}
-                className="w-full max-w-sm py-3 mt-2 rounded-xl bg-[#01B574] hover:bg-[#40B389] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
+                className="w-full max-w-sm py-3 mt-2 rounded-xl bg-[#01B574] hover:bg-[#40B389] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition cursor-pointer"
               >
                 <XCircleIcon className="w-6 h-6" /> Cancelar
               </button>
@@ -218,7 +218,7 @@ export default function Dashboard() {
             <button
               type="button"
               onClick={voltarParaLogin}
-              className="w-full max-w-sm py-3 mt-2 rounded-xl bg-[#9E0004] hover:bg-[#B9030F] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition"
+              className="w-full max-w-sm py-3 mt-2 rounded-xl bg-[#9E0004] hover:bg-[#B9030F] text-white font-semibold flex items-center justify-center gap-2 hover:scale-105 hover:shadow-2xl transition cursor-pointer"
             >
               <ArrowLeftStartOnRectangleIcon className="w-6 h-6" /> Sair
             </button>
@@ -262,7 +262,7 @@ export default function Dashboard() {
                 <div className="flex justify-between mt-auto">
                   <button
                     onClick={() => handleEdit(product)}
-                    className="bg-[#01B574] hover:bg-[#40B389] px-3 py-1 rounded flex items-center gap-1 font-semibold hover:scale-105 hover:shadow-2xl transition"
+                    className="bg-[#01B574] hover:bg-[#40B389] px-3 py-1 rounded flex items-center gap-1 font-semibold hover:scale-105 hover:shadow-2xl transition cursor-pointer"
                   >
                     <PencilSquareIcon className="w-5 h-5" />
                     Editar
@@ -274,7 +274,7 @@ export default function Dashboard() {
                         handleDelete(product.id);
                       }
                     }}
-                    className="bg-[#9E0004] hover:bg-[#B9030F] px-3 py-1 rounded flex items-center gap-1 font-semibold hover:scale-105 hover:shadow-2xl transition"
+                    className="bg-[#9E0004] hover:bg-[#B9030F] px-3 py-1 rounded flex items-center gap-1 font-semibold hover:scale-105 hover:shadow-2xl transition cursor-pointer"
                   >
                     <TrashIcon className="w-5 h-5" />
                     Deletar

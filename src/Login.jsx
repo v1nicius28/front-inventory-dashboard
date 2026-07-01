@@ -37,7 +37,7 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-[radial-gradient(circle,#171A57_0%,#060B26_100%)] fixed inset-0 flex justify-center items-center">
+    <div className="min-h-screen w-full bg-[radial-gradient(circle,#171A57_0%,#020515_100%)] fixed inset-0 flex justify-center items-center">
 
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
         <div className="
@@ -94,7 +94,7 @@ export default function Login() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="ml-2 text-white/70 hover:text-white"
+                  className="ml-2 text-white/70 hover:text-white cursor-pointer"
                 >
                   {showPassword ? <EyeSlashIcon className="w-5 h-5" /> : <EyeIcon className="w-5 h-5" />}
                 </button>
@@ -106,10 +106,11 @@ export default function Login() {
               type="submit"
               className="
                 w-full max-w-sm py-3 mt-6 rounded-xl
-                bg-linear-to-r from-[#30375c] to-[#171A57]
+                bg-linear-to-r from-[#3f4a79] to-[#171A57]
                 text-white font-semibold
+                cursor-pointer
                 transform transition-all duration-150
-                hover:scale-105 hover:shadow-2xl hover:from-[#464c69] hover:to-[#171A57]
+                hover:scale-105 hover:shadow-2xl hover:from-[#565d7c] hover:to-[#171A57]
                 active:scale-95 
               "
             >
@@ -129,10 +130,11 @@ export default function Login() {
               onClick={entrarComoConvidado}
               className="
                 w-full max-w-sm py-3 rounded-xl
-                bg-linear-to-r from-[#30375c] to-[#171A57]
+                bg-linear-to-r from-[#3f4a79] to-[#171A57]
                 text-white font-semibold
+                cursor-pointer
                 transform transition-all duration-150
-                hover:scale-105 hover:shadow-2xl hover:from-[#464c69] hover:to-[#171A57]
+                hover:scale-105 hover:shadow-2xl hover:from-[#565d7c] hover:to-[#171A57]
                 active:scale-95 
               "
             >
