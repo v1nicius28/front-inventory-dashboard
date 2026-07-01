@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 export default function Register() {
   const navigate = useNavigate();
 
@@ -16,9 +18,9 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      await axios.post("https://api-inventory-dashboard.onrender.com/auth/register", { name, email, password });
+      await axios.post(`${API_BASE_URL}/auth/register`, { name, email, password });
 
-      const { data } = await axios.post("https://api-inventory-dashboard.onrender.com/auth/login", { email, password });
+      const { data } = await axios.post(`${API_BASE_URL}/auth/login`, { email, password });
 
       localStorage.setItem("token", data.token);
 
