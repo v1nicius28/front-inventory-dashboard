@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 
 const API_URL = `${import.meta.env.VITE_API_URL}/auth/login`;
+const GUEST_URL = `${import.meta.env.VITE_API_URL}/auth/guest`;
 
 export default function Login() {
   const navigate = useNavigate();
@@ -14,27 +15,38 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   async function handleSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const { data } = await axios.post(API_URL, { email, password });
-
-      localStorage.setItem("token", data.token);
-
-      navigate("/dashboard");
-    } catch (error) {
-      if (error.response && error.response.status === 401) {
-        alert("Email ou senha inválidos!");
-      } else {
-        console.error(error);
-        alert("Erro ao conectar ao servidor.");
-      }
+  try {
+    const { data } = await axios.post(API_URL, { email, password });
+    localStorage.setItem("token", data.token);
+    navigate("/dashboard");
+  } catch (error) {
+    if (error.response && error.response.status === 429) {
+      alert("Muitas tentativas em pouco tempo. Aguarde um instante e tente novamente.");
+    } else if (error.response && error.response.status === 401) {
+      alert("Email ou senha inválidos!");
+    } else {
+      console.error(error);
+      alert("Erro ao conectar ao servidor.");
     }
   }
+}
 
-  function entrarComoConvidado() {
+async function entrarComoConvidado() {
+  try {
+    const { data } = await axios.post(GUEST_URL);
+    localStorage.setItem("token", data.token);
     navigate("/dashboard");
+  } catch (error) {
+    if (error.response && error.response.status === 429) {
+      alert("Muitas tentativas em pouco tempo. Aguarde um instante e tente novamente.");
+    } else {
+      console.error(error);
+      alert("Erro ao entrar como convidado. Tente novamente.");
+    }
   }
+}
 
   return (
     <div className="min-h-screen w-full bg-[radial-gradient(circle,#171A57_0%,#020515_100%)] fixed inset-0 flex justify-center items-center">

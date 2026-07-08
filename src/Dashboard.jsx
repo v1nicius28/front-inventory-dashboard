@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "./api/axiosConfig"; 
 
 import {
   PlusCircleIcon,
@@ -16,7 +16,7 @@ import {
   CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
 
-const API_URL = `${import.meta.env.VITE_API_URL}/products`;
+const PRODUCTS_PATH = "/products";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get(API_URL);
+        const { data } = await api.get(PRODUCTS_PATH);
         setProducts(data);
       } catch (err) {
         console.error("Erro ao buscar produtos:", err);
@@ -58,15 +58,15 @@ export default function Dashboard() {
 
     try {
       if (editingId) {
-        await axios.put(`${API_URL}/${editingId}`, bodyData);
+        await api.put(`${PRODUCTS_PATH}/${editingId}`, bodyData);
       } else {
-        await axios.post(API_URL, bodyData);
+        await api.post(PRODUCTS_PATH, bodyData);
       }
 
       setForm({ name: "", price: "", quantity: "", category: "", brand: "" });
       setEditingId(null);
 
-      const { data } = await axios.get(API_URL);
+      const { data } = await api.get(PRODUCTS_PATH);
       setProducts(data);
     } catch (err) {
       console.error("Erro ao salvar produto:", err);
@@ -91,8 +91,8 @@ export default function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API_URL}/${id}`);
-      const { data } = await axios.get(API_URL);
+      await api.delete(`${PRODUCTS_PATH}/${id}`);
+      const { data } = await api.get(PRODUCTS_PATH);
       setProducts(data);
     } catch (err) {
       console.error("Erro ao deletar produto:", err);
@@ -100,6 +100,7 @@ export default function Dashboard() {
   };
 
   const voltarParaLogin = () => navigate("/login");
+
 
   return (
     <div className="min-h-screen w-full bg-[radial-gradient(circle,#171A57_0%,#060B26_100%)] flex items-center justify-center p-6 relative">
