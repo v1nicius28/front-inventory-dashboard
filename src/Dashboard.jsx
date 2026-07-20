@@ -22,6 +22,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({
     name: "",
     price: "",
@@ -38,6 +39,8 @@ export default function Dashboard() {
         setProducts(data);
       } catch (err) {
         console.error("Erro ao buscar produtos:", err);
+      } finally {
+      setLoading(false);
       }
     };
 
@@ -228,8 +231,10 @@ export default function Dashboard() {
 
         {/* LISTA DE PRODUTOS */}
         <div className="lg:w-2/3 w-full p-6 lg:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 overflow-auto custom-scrollbar max-h-[75vh]">
-          {products.length === 0 ? (
-            <p className="text-white text-center col-span-full">Carregando produtos</p>
+          {loading ? (
+            <p className="text-white text-center col-span-full">Carregando produtos...</p>
+          ) : products.length === 0 ? (
+            <p className="text-white text-center col-span-full">Nenhum produto cadastrado ainda.</p>
           ) : (
             products.map((product) => (
               <div
