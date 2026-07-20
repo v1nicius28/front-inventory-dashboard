@@ -35,7 +35,9 @@ O frontend é hospedado como um site estático em infraestrutura AWS, servido gl
 
 ---
 
-![Diagrama](./public/diagrama.png)
+<p align="center">
+  <img src="./public/diagrama.png" alt="Diagrama" height="400" />
+</p>
 
 ---
 
