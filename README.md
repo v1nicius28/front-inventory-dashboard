@@ -48,7 +48,7 @@ O projeto conta com uma esteira automatizada de deploy. A cada `push` realizado 
 ---
 
 <p align="center">
-  <img src="./public/diagrama.png" alt="Diagrama" height="400" />
+  <img src="./public/diagrama.png" alt="Diagrama"/>
 </p>
 
 ---
